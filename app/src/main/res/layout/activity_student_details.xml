@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".StudentDetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/logo_back"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/clg_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:src="@drawable/ritlogo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/college_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/logo"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="Raghu Institute Of Technology (A)"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/department"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/college_title"
+                android:layout_toRightOf="@+id/logo"
+                android:layout_weight="1"
+                android:paddingHorizontal="5dp"
+                android:paddingBottom="5dp"
+                android:text="Department Of ECE"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/dmslogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:src="@drawable/dmslogo" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/ll1"
+        android:layout_above="@+id/ll2"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="25dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:orientation="vertical">
+          <TextView
+              android:id="@+id/profile"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:fontFamily="@font/poppins_bold"
+              android:text="Student Details"
+              android:textColor="@color/apsche_orange"
+              android:textSize="24dp"
+              android:textStyle="bold" />
+
+          <ScrollView
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent">
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="25dp"
+                  android:background="@color/white"
+                  android:orientation="vertical">
+
+
+                  <TextView
+                      android:id="@+id/register"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="20dp"
+                      android:layout_marginVertical="5dp"
+                      android:text="Regd No."
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+                  <EditText
+                      android:id="@+id/registerValue"
+                      android:layout_width="wrap_content"
+                      android:layout_height="35dp"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_weight="1"
+                      android:background="@drawable/text_back"
+                      android:ems="10"
+                      android:hint="193J1A04XX"
+                      android:inputType="text"
+                      android:paddingHorizontal="15dp"
+                      android:paddingVertical="5dp"
+                      android:textColor="@color/black"
+                      android:textColorHint="@color/black"
+                      android:textSize="20dp" />
+
+
+                  <TextView
+                      android:id="@+id/name"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="20dp"
+                      android:layout_marginVertical="5dp"
+                      android:text="Name of the student"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+
+                  <EditText
+                      android:id="@+id/idEdtStudentName"
+                      android:layout_width="wrap_content"
+                      android:layout_height="35dp"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_weight="1"
+                      android:background="@drawable/text_back"
+                      android:ems="10"
+                      android:hint="NAME"
+                      android:inputType="text"
+                      android:paddingHorizontal="15dp"
+                      android:paddingVertical="5dp"
+                      android:textColor="@color/black"
+                      android:textColorHint="@color/black"
+                      android:textSize="20dp" />
+
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="20dp"
+                      android:layout_marginVertical="5dp"
+                      android:text="Year of Admission"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+
+
+                  <TextView
+                      android:id="@+id/yearOfAdmission"
+                      android:layout_width="wrap_content"
+                      android:layout_height="35dp"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_weight="1"
+                      android:background="@drawable/text_back"
+                      android:ems="10"
+                      android:text="YYYY"
+                      android:paddingHorizontal="15dp"
+                      android:paddingVertical="5dp"
+                      android:textColor="@color/black"
+                      android:textColorHint="@color/black"
+                      android:textSize="20dp" />
+
+                  <TextView
+                      android:id="@+id/branch"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="20dp"
+                      android:layout_marginVertical="5dp"
+                      android:text="Branch"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+
+                  <Spinner
+                      android:id="@+id/branchSpinner"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_marginVertical="5dp"
+                      android:background="@color/white" />
+
+                  <TextView
+                      android:id="@+id/section"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="20dp"
+                      android:layout_marginVertical="5dp"
+                      android:text="Section"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+
+                  <Spinner
+                      android:id="@+id/sectionSpinner"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_marginVertical="5dp"
+                      android:background="@color/white" />
+
+                  <TextView
+                      android:id="@+id/admittedUnder"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="20dp"
+                      android:layout_marginVertical="5dp"
+                      android:text="Admitted under"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+
+                  <Spinner
+                      android:id="@+id/admittedUnderSpinner"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_marginVertical="5dp"
+                      android:background="@color/white" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="20dp"
+                      android:layout_marginVertical="5dp"
+                      android:text="Date of Birth"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+
+                  <TextView
+                      android:id="@+id/dateOfBirth"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_marginBottom="5dp"
+                      android:background="@drawable/text_back"
+                      android:ems="10"
+                      android:paddingHorizontal="15dp"
+                      android:paddingVertical="5dp"
+                      android:text="DD/MM/YYYY"
+                      android:textColor="@color/black"
+                      android:textSize="20dp" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="20dp"
+                      android:layout_marginVertical="5dp"
+                      android:text="Gender"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+
+                  <Spinner
+                      android:id="@+id/genderSpinner"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_marginVertical="5dp"
+                      android:background="@color/white" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="20dp"
+                      android:layout_marginVertical="5dp"
+                      android:text="Blood Group"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+
+                  <Spinner
+                      android:id="@+id/bloodGroupSpinner"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_marginVertical="5dp"
+                      android:background="@color/white" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="20dp"
+                      android:layout_marginVertical="5dp"
+                      android:text="Student E-mail"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+
+                  <EditText
+                      android:id="@+id/editTextStudentEmail"
+                      android:layout_width="wrap_content"
+                      android:layout_height="35dp"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_weight="1"
+                      android:background="@drawable/text_back"
+                      android:ems="10"
+                      android:hint="Enter E-mail"
+                      android:inputType="textEmailAddress"
+                      android:paddingHorizontal="15dp"
+                      android:paddingVertical="5dp"
+                      android:textColor="@color/black"
+                      android:textColorHint="@color/black"
+                      android:textSize="20dp" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="20dp"
+                      android:layout_marginVertical="5dp"
+                      android:text="Student Phone no."
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+
+                  <EditText
+                      android:id="@+id/editTextPhoneNumber"
+                      android:layout_width="wrap_content"
+                      android:layout_height="35dp"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_weight="1"
+                      android:background="@drawable/text_back"
+                      android:ems="10"
+                      android:hint="Enter Phone number"
+                      android:inputType="phone"
+                      android:paddingHorizontal="15dp"
+                      android:paddingVertical="5dp"
+                      android:textColor="@color/black"
+                      android:textColorHint="@color/black"
+                      android:textSize="20dp" />
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="20dp"
+                      android:layout_marginVertical="5dp"
+                      android:text="EAMCET / ECET Rank"
+                      android:textColor="@color/black"
+                      android:textStyle="bold" />
+
+                  <EditText
+                      android:id="@+id/editTextRank"
+                      android:layout_width="wrap_content"
+                      android:layout_height="35dp"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_weight="1"
+                      android:background="@drawable/text_back"
+                      android:ems="10"
+                      android:hint="Enter Rank"
+                      android:inputType="number"
+                      android:paddingHorizontal="15dp"
+                      android:paddingVertical="5dp"
+                      android:textColor="@color/black"
+                      android:textColorHint="@color/black"
+                      android:textSize="20dp" />
+
+                  <Button
+                      android:id="@+id/idBtnSubmit"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginHorizontal="15dp"
+                      android:layout_marginBottom="25dp"
+                      android:layout_gravity="center_horizontal"
+                      android:backgroundTint="@color/blue"
+                      android:text="Submit"
+                      android:textColor="@color/black"
+                      android:textStyle="bold"
+                      app:cornerRadius="20dp" />
+
+
+
+              </LinearLayout>
+          </ScrollView>
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/logo_back">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="All Rights Reserved"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text=" @Raghu Institute of Technology"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>
